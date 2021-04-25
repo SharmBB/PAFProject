@@ -1,0 +1,56 @@
+
+//Read 
+API for get all the Payment details in the database (GET Request)
+Resource: PaymentService
+Request: GET ServicePayment/PaymentService
+Responce: HTML table with Benefactor,Payer,Amount,Account_No,Bank
+ 
+
+//Insert
+API for register Payment to the database (POST Request)
+Resource: PaymentService
+Request: POST ServicePayment/PaymentService
+Media: Application form Url Encoded
+Data: {
+	“Benefactor”: “<Benefactor>”,
+        “Payer”: “<Payer>”,
+	“Amount”: “<Amount>”,
+	“Account_No”: “<Account_No>”,
+         “Bank”: “<Bank>”
+ }
+Response:  {  result = “Insertion Success” }
+           {  error =  “Error while insert” }
+
+
+
+//Delete
+API for Delete Payment to the database (DELETE Request)
+Resource: PaymentService
+Request: DELETE ServicePayment/PaymentService
+Media: Application XML
+Data:
+<paymentData>
+ <Payment_ID>"<Payment_ID>"</Payment_ID>
+</paymentData> 
+
+Response:   {  result = “Successfully product Details Deleted” }
+            {  error =  “Error while deleting” }
+
+
+
+//Update
+API for Update Payment to the database (PUT Request)
+Resource: PaymentService
+Request: PUT  ServicePayment/PaymentService
+Media: Application JSON
+Data:
+  {     “Payment_ID”:”<Payment_ID>”
+  	“Benefactor”: “<Benefactor>”,
+        “Payer”: “<Payer>”,
+	“Amount”: “<Amount>”,
+	“Account_No”: “<Account_No>”,
+         “Bank”: “<Bank>”
+   }
+Response: {  result = “Successfully Product Detail Updated” }
+                 {  error =  “Error while updating” }
+
