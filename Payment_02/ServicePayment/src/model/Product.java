@@ -23,7 +23,7 @@ public class Product {
 			return con;
 		}
 		
-		// Insert
+		// Insert product
 		public String insertProducts(String Product_Code, String Prod_Name, String Contributors, String Email, String Price) {
 
 			String output = "";

@@ -32,7 +32,7 @@ public class ServiceProduct {
 		return productsObj.readProducts();
 	}
 
-	// Insert
+	// Insert product
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
